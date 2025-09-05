@@ -1,0 +1,38 @@
+# macOS resource fork files
+._*
+.DS_Store
+
+# Original APK (keep only the signed one)
+com.offsec.nhterm_2023040100.apk
+
+# Temporary directories
+clean_apk/
+temp_apk/
+verify_apk/
+
+# Debug keystore (contains private keys)
+debug.keystore
+
+# Decompiled APK (can be regenerated)
+decompiled_apk/
+
+# Build artifacts
+*.log
+*.tmp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules if any
+node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Temporary files
+*.bak
+*.backup
