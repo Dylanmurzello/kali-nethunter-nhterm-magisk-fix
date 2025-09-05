@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/terminal_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/pm_tab_header" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.Dark" android:id="@id/pm_toolbar" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+        <com.offsec.nhterm.ui.pm.view.RecyclerTabLayout android:id="@id/pm_tab_layout" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="@dimen/recycler_tab_height" />
+    </LinearLayout>
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/pm_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/pm_tab_header" />
+</RelativeLayout>

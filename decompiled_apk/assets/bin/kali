@@ -1,0 +1,20 @@
+#!/system/bin/sh
+set -e
+
+# Pick Magisk CLI (yours is /debug_ramdisk/magisk)
+if [ -x /debug_ramdisk/magisk ]; then
+  MAGISK=/debug_ramdisk/magisk
+elif [ -x /sbin/magisk ]; then
+  MAGISK=/sbin/magisk
+else
+  MAGISK="$(magisk --path 2>/dev/null)/magisk"
+fi
+[ -x "$MAGISK" ] || { echo "[nh] magisk CLI not found"; exit 127; }
+
+# NetHunter scripts live here; expose them to PATH for the root shell
+NH_SCRIPTS="/data/data/com.offsec.nethunter/files/scripts:/data/data/com.offsec.nethunter/scripts:/data/data/com.offsec.nethunter/files/scripts/bin"
+
+# Hand off to NetHunter's official bootstrap (does mounts, PTY, chroot)
+exec "$MAGISK" su --mount-master -c "PATH=\$PATH:/system/sbin:/product/bin:/apex/com.android.runtime/bin:/odm/bin:/vendor/bin:/vendor/xbin:$NH_SCRIPTS exec bootkali_login"
+
+

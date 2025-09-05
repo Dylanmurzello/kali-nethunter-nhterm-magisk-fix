@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<de.mrapp.android.tabswitcher.view.TabSwitcherButton android:layout_width="@dimen/tab_switcher_drawable_size" android:layout_height="@dimen/tab_switcher_drawable_size"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

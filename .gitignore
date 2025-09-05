@@ -13,8 +13,8 @@ verify_apk/
 # Debug keystore (contains private keys)
 debug.keystore
 
-# Decompiled APK (can be regenerated)
-decompiled_apk/
+# Decompiled APK - now included for reference
+# decompiled_apk/
 
 # Build artifacts
 *.log

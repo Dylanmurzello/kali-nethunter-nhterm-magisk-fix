@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?selectableItemBackground" android:padding="@dimen/package_item_padding" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.textview.MaterialTextView android:textColor="@color/textColor" android:id="@id/package_item_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/TextAppearance.AppCompat.Large" />
+    <com.google.android.material.textview.MaterialTextView android:textColor="@color/textColorSecondary" android:id="@id/package_item_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" android:layout_marginStart="@dimen/text_margin" />
+</LinearLayout>

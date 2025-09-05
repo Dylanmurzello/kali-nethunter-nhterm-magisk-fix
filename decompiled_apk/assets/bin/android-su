@@ -1,0 +1,17 @@
+#!/data/data/com.offsec.nhterm/files/usr/bin/bash
+# Version: 1.0.3
+
+# export path for android bins/tools
+export PATH="/data/data/com.offsec.nethunter/files/scripts:/data/data/com.offsec.nethunter/files/scripts/bin:/data/data/com.offsec.nhterm/files/home/.nhterm/script:/data/data/com.offsec.nhterm/files/usr/bin:/data/data/com.offsec.nhterm/files/usr/sbin:/sbin:/system/bin:/system/xbin:/apex/com.android.runtime/bin:/apex/com.android.art/bin:/odm/bin:/vendor/bin:."
+# Remove some exports that break default android binaries from running
+unset LD_LIBRARY_PATH
+unset LD_PRELOAD
+export PS1="\\[\\e[1;32m\\]\\u [ \\[\\e[0m\\]\\w\\[\\e[1;32m\\] ]\$ \\[\\e[0m\\]"
+# Find and remember su location
+SU1=$(which su)
+SU2="$SU1 -mm -s $@"
+
+# clear out old view
+clear
+
+$SU2 /data/data/com.offsec.nhterm/files/usr/bin/bash
