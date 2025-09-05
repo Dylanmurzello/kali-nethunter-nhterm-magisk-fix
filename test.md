@@ -98,6 +98,8 @@ ls nhterm/build/outputs/apk/debug/
 
 ### Method 3: Manual APK Modification (Advanced)
 
+*(IDK why would you even wanna do this but, you do you)*
+
 For those who want to modify existing APKs:
 
 #### Prerequisites
